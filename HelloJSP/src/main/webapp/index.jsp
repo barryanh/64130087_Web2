@@ -11,12 +11,18 @@
 
 	<h1>Demo JSP</h1>
 	<%= new Date().toString() %>
-	<%! int a = 10; %>
-	<b>
-	<% 
-		out.print(a);
+	<%
+		int a;
+		a = 5;
+		int b = a + 99;
 	%>
-	</b>
+	<hr>
+	<%= b %>
+	<hr>
+	<% 
+		out.print(b);
+	%>
+
 
 </body>
 </html>
