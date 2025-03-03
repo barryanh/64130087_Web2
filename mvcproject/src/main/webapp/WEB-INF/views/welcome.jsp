@@ -7,8 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-
-Chào mừng bạn đến với MVC
-
+<h1>Hello Spring MVC</h1>
 </body>
 </html>
