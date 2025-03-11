@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+ 	<h2>Danh sách Sinh viên</h2>
+ 	
+	<div>
+        <h3>Danh sách sinh viên</h3>
+        <ul>
+            <li th:each="sv : ${sinhViens}">
+                <p>MSSV: <span th:text="${sv.mssv}"></span></p>
+                <p>Tên sinh viên: <span th:text="${sv.hoTen}"></span></p>
+                <p>Năm sinh: <span th:text="${sv.namSinh}"></span></p>
+                <p>Giới tính: <span th:text="${sv.gioiTinh}"></span></p>
+            </li>
+        </ul>
+    </div>
+
+</body>
+</html>
