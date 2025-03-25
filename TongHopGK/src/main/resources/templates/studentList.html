@@ -3,8 +3,7 @@
   <head th:replace="~{layout :: page_head}"></head>
   <body>
  
-	<img src="https://ntu.edu.vn/uploads/46/images/news/6242/img/truong-dai-hoc-nha-trang-phat-huy-truyen-thong-63-nam-xay-dung-va-phat-trien-vun.jpg" height="150" width="100%" />
-	
+	<img th:replace="~{layout :: page_bg}" />	
     
     <nav th:replace="~{layout :: page_navbar}"></nav>
 	
@@ -12,6 +11,22 @@
 		<div class="row no-gutters">
 			<div class="col-md-10">
 		    	<h2>Danh sách sinh viên</h2>
+		    	<table class="table mt-3">
+				  <thead>
+				    <tr>
+				      <th scope="col">MSSV</th>
+				      <th scope="col">Họ Tên</th>
+				      <th scope="col">Điểm TB</th>
+				    </tr>
+				  </thead>
+				  <tbody>
+				    <tr th:each="sv : ${svs}">
+		            	<td th:text="${sv.mssv}"></td>
+		                <td th:text="${sv.hoTen}"></td>
+		                <td th:text="${sv.diemTB}"></td>
+		            </tr>
+				  </tbody>
+				</table>
 			</div>
 			<div class="col-md-2">
 		        <img src="https://cellphones.com.vn/sforum/wp-content/uploads/2022/05/43-1.jpg" height="500" width="100%" />
