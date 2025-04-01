@@ -5,12 +5,14 @@ public class Student {
     private String hoTen;
     private double diemTB;
 
+    // Constructor
     public Student(String mssv, String hoTen, double diemTB) {
         this.mssv = mssv;
         this.hoTen = hoTen;
         this.diemTB = diemTB;
     }
 
+    // Getter và Setter
     public String getMssv() {
         return mssv;
     }
