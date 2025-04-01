@@ -57,6 +57,9 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+	                <mainClass>thiGK.ntu64130087.TruongQuocAnh_ThiGK.TruongQuocAnhThiGkApplication</mainClass>
+	            </configuration>
 			</plugin>
 		</plugins>
 	</build>

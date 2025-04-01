@@ -33,7 +33,9 @@
     </div>
 
     <div class="content">
-        <th:block th:replace="::content"></th:block>
+        <th:block th:fragment="content">
+            <!-- Đây là nơi sẽ được thay thế bằng nội dung từ các trang khác -->
+        </th:block>
     </div>
 
     <div class="footer">

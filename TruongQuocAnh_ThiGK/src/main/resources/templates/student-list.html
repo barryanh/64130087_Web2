@@ -1,6 +1,7 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org" th:replace="layout :: content">
+<html xmlns:th="http://www.thymeleaf.org">
 <body>
+<div th:replace="~{layout :: content}">
     <h2>Student List</h2>
     <table>
         <tr>
@@ -19,5 +20,6 @@
             </td>
         </tr>
     </table>
+</div>
 </body>
 </html>
