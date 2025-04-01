@@ -21,7 +21,6 @@ public class HomeController {
     public String dashboard(Model model) {
         model.addAttribute("students", studentService.getAllStudents());
         model.addAttribute("topics", topicService.getAllTopics());
-
         model.addAttribute("username", "Student Name");
 
         return "dashboard";
