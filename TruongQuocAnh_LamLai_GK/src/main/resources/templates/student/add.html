@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html layout:decorate="~{admin_layout.html}">
+<head>
+</head>
+<body>
+
+<div layout:fragment="content">
+			<section class="content-header">
+				<div class="container-fluid my-2">
+					<div class="row mb-2">
+						<div class="col-sm-6">
+							<h1>Add Student</h1>
+						</div>
+						<div class="col-sm-6 text-right">
+							<a href="/student/all" class="btn btn-primary">Back</a>
+						</div>
+					</div>
+				</div>
+				<!-- /.container-fluid -->
+			</section>
+			<!-- Main content -->
+			<section class="content">
+				<!-- Default box -->
+				<div class="container-fluid">
+					<div class="card">
+						<div class="card-body">
+							<div class="row">
+								<div class="col-md-6">
+									<div class="mb-3">
+										<label for="name">Id</label>
+										<input type="text" name="id" id="id" class="form-control"
+											placeholder="Id">
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="mb-3">
+										<label for="email">Student name</label>
+										<input type="text" name="name" id="name" class="form-control"
+											placeholder="Slug">
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="mb-3">
+										<label for="email">Group ID</label>
+										<input type="text" name="group" id="group" class="form-control"
+											placeholder="Slug">
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="pb-5 pt-3">
+						<button type="submit" class="btn btn-primary">Create</button>
+						<a href="/student/all" class="btn btn-outline-dark ml-3">Cancel</a>
+					</div>
+				</div>
+				<!-- /.card -->
+			</section>
+			<!-- /.content -->
+</div>
+
+</body>
+</html>

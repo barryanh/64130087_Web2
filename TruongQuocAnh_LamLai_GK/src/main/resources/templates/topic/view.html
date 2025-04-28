@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html layout:decorate="~{admin_layout.html}">
+<head>
+</head>
+<body>
+
+<div layout:fragment="content">
+			<section class="content-header">
+				<div class="container-fluid my-2">
+					<div class="row mb-2">
+						<div class="col-sm-6">
+							<h1>View Topic</h1>
+						</div>
+						<div class="col-sm-6 text-right">
+							<a href="/topic/all" class="btn btn-primary">Back</a>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="content">
+				<div class="container-fluid">
+					<div class="card">
+						<div class="card-body">
+							<div class="row">
+								<div class="col-md-12">
+									<div class="mb-3">
+										<label for="email">Topic name</label>
+										<input type="text" name="topicname" id="topicname" class="form-control"
+											placeholder="Topic name" th:value="${topic.topicName}" readonly>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="mb-3">
+										<label for="email">Topic Type</label>
+										<input type="text" name="topicType" id="topicType" class="form-control"
+											placeholder="Topic Type" th:value="${topic.topicType}" readonly>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="mb-3">
+										<label for="email">Supervisor ID</label>
+										<input type="text" name="supervisorId" id="supervisorId" class="form-control"
+											placeholder="Supervisor ID" th:value="${topic.supervisorId}" readonly>
+									</div>
+								</div>
+								<div class="col-md-12">
+									<div class="mb-3">
+										<label for="email">Topic Description</label>
+										<textarea class="form-control" name="topicdescription" id="topicdescription" placeholder="Topic Description" th:text="${topic.topicDescription}" readonly></textarea>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+</div>
+
+</body>
+</html>

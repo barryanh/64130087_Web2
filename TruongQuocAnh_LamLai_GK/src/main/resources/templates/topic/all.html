@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html layout:decorate="~{admin_layout.html}">
+<head>
+</head>
+<body>
+
+<div layout:fragment="content">
+	<!-- Content Header (Page header) -->
+				<section class="content-header">					
+					<div class="container-fluid my-2">
+						<div class="row mb-2">
+							<div class="col-sm-6">
+								<h1>Topic</h1>
+							</div>
+							<div class="col-sm-6 text-right">
+								<a href="/topic/add" class="btn btn-primary">New Topic</a>
+							</div>
+						</div>
+					</div>
+					<!-- /.container-fluid -->
+				</section>
+				<!-- Main content -->
+				<section class="content">
+					<!-- Default box -->
+					<div class="container-fluid">
+						<div class="card">
+							<div class="card-body table-responsive p-0">								
+								<table class="table table-hover text-nowrap">
+									<thead>
+										<tr>
+											<th width="150">ID</th>
+											<th>topicName</th>
+											<th>supervisorId</th>
+											<th width="150">topicType</th>
+											<th width="200">Action</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr th:each="topics : ${topics}">
+											<td th:text="${topics.id}"></td>
+											<td th:text="${topics.topicName}"></td>
+											<td th:text="${topics.supervisorId}"></td>
+											<td th:text="${topics.topicType}"></td>
+											<td>
+												<a class="btn btn-primary btn-sm" th:href="@{/topic/view/{id}(id=*{topics.id})}">
+													<i class="fa fa-pen"></i>&nbsp;&nbsp;Xem
+												</a>
+												<a class="btn btn-info btn-sm" href="">
+													<i class="fa fa-pen"></i>&nbsp;&nbsp;Chỉnh sửa
+												</a>
+												<a class="btn btn-danger btn-sm" th:href="@{/topic/delete/{id}(id=*{topics.id})}">
+													<i class="fa fa-trash"></i>&nbsp;&nbsp;Xóa
+												</a>
+											</td>
+										</tr>
+									</tbody>
+								</table>										
+							</div>
+						</div>
+					</div>
+					<!-- /.card -->
+				</section>
+				<!-- /.content -->
+</div>
+
+</body>
+</html>

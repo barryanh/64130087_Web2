@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html layout:decorate="~{admin_layout.html}">
+<head>
+</head>
+<body>
+
+<div layout:fragment="content">
+	<!-- Content Header (Page header) -->
+				<section class="content-header">					
+					<div class="container-fluid my-2">
+						<div class="row mb-2">
+							<div class="col-sm-6">
+								<h1>Student</h1>
+							</div>
+							<div class="col-sm-6 text-right">
+								<a href="/student/add" class="btn btn-primary">New Student</a>
+							</div>
+						</div>
+					</div>
+					<!-- /.container-fluid -->
+				</section>
+				<!-- Main content -->
+				<section class="content">
+					<!-- Default box -->
+					<div class="container-fluid">
+						<div class="card">
+							<div class="card-body table-responsive p-0">								
+								<table class="table table-hover text-nowrap">
+									<thead>
+										<tr>
+											<th width="150">ID</th>
+											<th>Student Name</th>
+											<th>Group ID</th>
+											<th width="100">Action</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr th:each="students : ${students}">
+											<td th:text="${students.id}"></td>
+											<td th:text="${students.name}"></td>
+											<td th:text="${students.groupId}"></td>
+											<td>
+												<a class="btn btn-primary btn-sm" th:href="@{/student/view/{id}(id=*{students.id})}">
+													<i class="fa fa-pen"></i>&nbsp;&nbsp;Xem
+												</a>
+												<a class="btn btn-info btn-sm" href="">
+													<i class="fa fa-pen"></i>&nbsp;&nbsp;Chỉnh sửa
+												</a>
+												<a class="btn btn-danger btn-sm" th:href="@{/student/delete/{id}(id=*{students.id})}">
+													<i class="fa fa-trash"></i>&nbsp;&nbsp;Xóa
+												</a>
+											</td>
+										</tr>
+									</tbody>
+								</table>										
+							</div>
+						</div>
+					</div>
+				</section>
+</div>
+
+</body>
+</html>
